@@ -63,9 +63,9 @@ const config = {
     resolve: {
         alias: {
             // node_modules    : path.join(__dirname, '/node_modules'),
-            // util            : path.join(__dirname, '/src/util'),
+            util            : path.join(__dirname, '/src/util'),
             component       : path.join(__dirname, '/src/component'),
-            // service         : path.join(__dirname, '/src/service'),
+            service         : path.join(__dirname, '/src/service'),
             page            : path.join(__dirname, '/src/pages')
         }
     },
