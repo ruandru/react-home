@@ -550,5 +550,33 @@ padding-top: 14px;
 font-size: 19px;
 }
 }
-
+#page-header{
+    padding: 30px;
+}
+.color-box{
+    display: block;
+    height: 160px;
+    text-align: center;
+    padding:20px 0;
+    opacity: .9;
+    transition: all 0.3s;
+    &:hover{
+        text-decoration: none;
+        color:#555;
+        transform: scale(1.08);
+    }
+    .count{
+        font-size: 50px;
+        height: 80px;
+        line-height: 80px;
+        padding-top: 0;
+    }
+    .desc{
+        font-size: 18px;
+        padding-top: 0;
+        .fa{
+            margin-right: 5px;
+        }
+    }
+}
 

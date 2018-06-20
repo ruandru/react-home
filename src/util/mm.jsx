@@ -9,6 +9,7 @@ class MUtil{
                 success     : res => {
                     // 数据请求成功
                     if(0 === res.status){
+                        
                         typeof resolve === 'function' && resolve(res.data, res.msg);
                     }
                     // 没有登录状态，强制登录
@@ -44,6 +45,28 @@ class MUtil{
     // 错误提示
     errorTips(errMsg){
         alert(errMsg || '好像哪里不对了~');
+    }
+    setStorage(name,data){
+        let dataType= typeof data;
+        if(dataType === 'object'){
+            window.localStorage.setItem(name,JSON.stringify(data));
+        }
+        else if(['number','string','bollean'].indexOf(dataType)>=0){
+            window.localStorage.setItem(name,data);
+        }else{
+            alert('buneng ')
+        }
+    }
+    getStorage(name){
+        let data=window.localStorage.getItem(name)
+        if(data){
+            return JSON.parse(data)
+        }else{
+            return '';
+        }
+    }
+    removeStorage(name){
+        window.localStorage.removeItem(name)
     }
 }
 export default MUtil;
